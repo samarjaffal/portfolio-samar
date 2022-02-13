@@ -15,20 +15,13 @@ const someProps = {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
+			@import "../styles/global.css";
 		</style>
 	</head>
 	<body>
 		<main>
 			<Counter {...someProps} client:visible>
-				<h1>Hello, React!</h1>
+				<h1 class="text-red-400 font-bold">Hello, React!</h1>
 			</Counter>
 		</main>
 	</body>

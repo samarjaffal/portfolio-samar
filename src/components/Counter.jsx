@@ -13,7 +13,9 @@ export default function Counter ({ children, count: initialCount }) {
         <pre>{count}</pre>
         <button onClick={add}>+</button>
       </div>
-      <div className="counter-message">{ children}</div>
+      <div className="counter-message">
+        <h1 className="text-black font-bold text-5xl">Samar Jaffal</h1>
+      </div>
     </>
   )
 }

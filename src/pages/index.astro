@@ -1,20 +1,27 @@
 ---
 // Component Imports
-import BaseLayout from '../layouts/BaseLayout.astro'
-// import Counter from '../components/Counter.jsx';
-// const someProps = {
-// 	count: 0,
-// };
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+// import BaseLayout from '../layouts/BaseLayout.astro'<-- this is not working well with Taildwind...
+import Header from '../components/Header.astro'
+import Projects from '../components/Projects.astro'
+import Footer from '../components/Footer.astro'
 ---
 
-
-<BaseLayout title="Homepage">
-  <!-- <Counter {...someProps} client:visible>
-    <h1 class="text-red-400 font-bold">Hello, React!</h1>
-  </Counter> -->
-   <h1 class="text-red-400 font-bold">Hello, React!</h1>
-</BaseLayout>
-
+<html>
+  <head>
+    <title>✨ Samar Jaffal Portfolio ✨</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		<style global>
+			@import "../styles/global.css";
+		</style>
+	</head>
+  <body>
+        <Header/>
+        <Projects/>
+        <Footer/>
+  </body>
+</html>

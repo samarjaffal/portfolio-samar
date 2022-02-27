@@ -1,0 +1,32 @@
+---
+// Component Imports
+import { projects } from '../projects.js'
+---
+
+<div class="min-h-screen w-full text-center p-4 md:p-20 bg-black">
+    <h4 class="text-white text-3xl md:text-4xl font-bold p-8">Projects</h4>     
+    <div>
+    <ul class="block lg:flex lg:justify-between lg:flex-wrap">
+        {
+        projects.map((project, index) => (
+            <li class="flex flex-col items-center p-4 mt-3 mx-auto">
+            <div class="w-80 h-52 rounded-md bg-white"></div>
+            <h5 class={`font-extrabold text-2xl md:text-3xl ${project.color} mt-3`}>{project.name}</h5>
+            <p class="text-base md:text-lg text-white w-80 mt-3">{project.description}</p>
+            <div class="p-2 bg-white rounded-md flex justify-between gap-x-3 mt-3">
+                {
+                    project.techs.map((tech) => (
+                    <img alt="Techology Logo" width="25" height="25" src={`/images/${tech}.png`} />
+                    ))
+                }
+            </div>
+            <button class="bg-white color-black rounded-full font-bold py-2 px-8 mt-4 hover:bg-footer hover:text-white transition duration-500 ease-in-out">View on Github</button>
+            </li>  
+        ))
+        }
+    </ul>
+    </div> 
+    <div class="w-full mt-12">
+        <a href="#" class="text-white text-xl md:text-3xl font-bold underline">Check more projects on Github {'>'}</a>  
+    </div> 
+</div>

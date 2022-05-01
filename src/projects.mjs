@@ -2,7 +2,7 @@ export const projects = [
   {
     name: 'Wuptick',
     color: 'color-primary',
-    description: 'Wuptick is a cool web application to manage and control teams, projects and tasks in one place.',
+    description: 'Wuptick is a cool web application to manage and control teams, projects, and tasks in one place.',
     techs: ['javascript', 'react', 'styled-components', 'graphql', 'nodejs'],
     image: 'images/wuptick.png',
     url: 'https://github.com/samarjaffal/wuptick-frontend'
@@ -18,7 +18,7 @@ export const projects = [
   {
     name: 'HelloChain',
     color: 'color-tertiary',
-    description: 'A web application for testing purposes when a user can sign in using Metamask and leave a "hello message" through te blockchain.',
+    description: 'A web application for testing purposes when a user can sign in using Metamask and leave a "hello message" through the blockchain.',
     techs: ['javascript', 'react', 'tailwindcss', 'solidity', 'hardhat'],
     image: 'images/hellochain.png',
     url: 'https://hellochain-app.samarjaffal.repl.co/'

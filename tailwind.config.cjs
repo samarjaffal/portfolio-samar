@@ -43,8 +43,7 @@ module.exports = {
       rose: colors.rose,
       primary: '#5271FF',
       secondary: '#FB7B7F',
-      tertiary: '#FFE53A',
-      footer: '#0C0C0C'
+      tertiary: '#FFE53A'
     }),
     columns: {
       auto: 'auto',

@@ -1,10 +1,8 @@
 ---
 // Component Imports
-import { projects } from '../projects.mjs'
-import GithubSvg from '../components/Icons/Github.astro'
-import EmailSvg from '../components/Icons/Email.astro'
-import LinkedinSvg from '../components/Icons/Linkedin.astro'
-import TwitterSvg from '../components/Icons/Twitter.astro'
+import Projects from '../components/Projects.astro';
+import PersonalInfo from '../components/PersonalInfo.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html>
@@ -12,6 +10,19 @@ import TwitterSvg from '../components/Icons/Twitter.astro'
     <title>✨ Samar Jaffal ✨</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Samar Jaffal web page">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Samar Jaffal">
+    <meta property="og:description" content="Javascript developer, eternal student and a dream person.">
+    <meta property="og:title" content="Samar Jaffal – Developer and creator">
+    <meta property="og:image" content="/images/apple-touch-icon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@samarj_h">
+    <meta name="twitter:domain" content="samardev.com">
+    <meta name="twitter:image" content="/images/apple-touch-icon.png">
+    <meta name="twitter:site" content="@samarj_h">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,112 +32,12 @@ import TwitterSvg from '../components/Icons/Twitter.astro'
 		</style>
 	</head>
   <body>
-        <!-- <Header/>
+    <div class="min-h-screen w-full container mx-auto px-4 md:px-10 lg:px-0 pt-10">
+      <main>
+        <PersonalInfo/>
         <Projects/>
-        <Footer/> -->
-      <div class="min-h-screen w-full container mx-auto px-4 md:px-10 lg:px-0 pt-10">
-          <main>
-            <header class="block lg:flex gap-x-8 lg:justify-center lg:items-stretch mx-auto">
-              <div class="block lg:flex lg:items-center gap-x-10">
-                <img src="images/me.jpeg" alt="My avatar" class="rounded-full w-32 h-32 md:w-48 md:h-48 mx-auto lg:mx-0" />
-                <div class="space-y-4 w-full text-center lg:text-left relative">
-                  <div>
-                    <h1 class="text-black font-bold text-4xl md:text-6xl mt-4 lg:mt-0">Samar Jaffal</h1>
-                    <h3 class="font-bold text-xl md:text-3xl"><span class="text-yellow-400">Javascript</span> Developer</h3>
-                  </div>
-                   <div class="hidden lg:flex gap-x-4 justify-end absolute right-0 top-14">
-                    <p class="text-black font-bold text-base md:text-xl">
-                      <a href="#">
-                        <EmailSvg/>
-                      </a>
-                    </p>
-                    <p class="text-black font-bold text-base md:text-xl">
-                      <a href="#">
-                       <GithubSvg/>
-                      </a>
-                    </p>
-                    <p class="text-black font-bold text-base md:text-xl">
-                      <a href="#">
-                        <LinkedinSvg/>
-                      </a>
-                    </p>
-                    <p class="text-black font-bold text-base md:text-xl">
-                      <a href="#">
-                        <TwitterSvg/>
-                      </a>
-                    </p>
-                  </div>
-                  <hr />
-                  <div>
-                    <p class="font-light text-base md:text-lg">👋 I'm  a experienced developer with more than <strong>4 years</strong> working on <strong>web technologies</strong>.  I enjoy creating cool stuff that can help people to solve a specific problem. Also I consider myself as <strong>an eternal student</strong>, because I believe that the only way to be successfull in life is using your <strong>knowledge as a tool</strong>.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flex lg:hidden gap-x-4 mt-6 lg:mt-0 justify-center lg:justify-between flex-row lg:flex-col">
-                <p class="text-black font-bold text-base md:text-xl">
-                  <a href="#">
-                    <EmailSvg/>
-                  </a>
-                </p>
-                <p class="text-black font-bold text-base md:text-xl">
-                  <a href="#">
-                    <GithubSvg/>
-                  </a>
-                </p>
-                <p class="text-black font-bold text-base md:text-xl">
-                  <a href="#">
-                    <LinkedinSvg/>
-                  </a>
-                </p>
-                <p class="text-black font-bold text-base md:text-xl">
-                  <a href="#">
-                    <TwitterSvg/>
-                  </a>
-                </p>
-              </div>
-            </header>
-
-            <section class="mx-auto mt-6">
-                <div class="flex gap-x-6 items-center">
-                  <h4 class="text-black font-extrabold text-2xl md:text-3xl w-48">✨ Projects</h4>
-                  <hr class="w-full"/>
-                </div>
-              
-                <ul class=" grid grid-cols-1 md:grid-cols-2 items-start gap-6 mt-4">
-                    {
-                    projects.map((project, index) => (
-                      <li class="shadow bg-white p-4 rounded hover:bg-slate-100 hover:shadow-md transition duration-500 ease-in-out">
-                        <a href="#" class="w-full h-full block">
-                          <h5 class={`font-bold text-xl md:text-2xl ${project.color}`}>{project.name}</h5>
-                          <p class="text-base font-light mt-3">{project.description}</p>
-                          <div class=" w-max p-2 flex justify-between gap-x-3 mt-3">
-                              {
-                                project.techs.map((tech) => <img alt="Techology Logo" width="25" height="25" src={`/images/${tech}.png`} />)
-                              }
-                          </div>
-                        </a>
-                      </li>  
-                    ))
-                    }
-                </ul>
-            </section>
-          </main>
-
-          <footer class="mt-6">
-              <div class="text-center">
-                   <p class="text-black font-bold font-montserrat">We don't have to 
-                    <span class="text-primary font-montserrat"> 
-                      dream 
-                    </span> 
-                    to make it beautiful, eveything we do 
-                    <span class="text-primary font-montserrat">
-                        it’s beautiful
-                    </span>
-                  </p>
-              </div>
-               <svg class="mx-auto block mt-3" xmlns="http://www.w3.org/2000/svg" fill="#FB7B7F" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/>
-              </svg>
-          </footer>
-      </div> 
+      </main>
+      <Footer/>
+    </div> 
   </body>
 </html>

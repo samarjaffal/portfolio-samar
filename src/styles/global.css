@@ -8,3 +8,15 @@
 html {
     scroll-behavior: smooth;
 }
+
+.color-primary{
+    color: #5271FF;
+}
+
+.color-secondary{
+    color: #FB7B7F
+}
+
+.color-tertiary{
+    color: #FFE53A
+}

@@ -10,7 +10,7 @@ export const projects = [
   {
     name: 'Wunderhod',
     color: 'color-secondary',
-    description: 'An application developed for testing purposes with React Native and Expo to have access to all service providers from Margarita, Nueva Esparta. Venezuela.',
+    description: 'An application developed for testing purposes with React Native and Expo to have access to all service providers from Nueva Esparta. Venezuela.',
     techs: ['javascript', 'react', 'firebase'],
     image: 'images/wunderhod.png',
     url: 'https://github.com/samarjaffal/services-app'
